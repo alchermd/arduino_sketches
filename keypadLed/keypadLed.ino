@@ -1,3 +1,13 @@
+/*
+    keypadLed v0.1 - Validate a keypad's input against a preset 
+    password to turn on an LED.
+
+    Keypad used in this sketch - https://images-na.ssl-images-amazon.com/images/I/61JPRn6su1L._SL1500_.jpg
+
+    Github @alchermd, 2017
+    MIT Licensed
+*/
+
 #include <Keypad.h> // Make sure to install the Keypad library
 #include <stdbool.h>
 #include <string.h>
@@ -27,7 +37,7 @@ Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 const int led = 13;
 
 /* Password setup. */
-char pw[] = "123";
+char pw[] = "123"; // Change this to any password (make sure your keypad can support it!)
 char user_pw[4];
 
 size_t i = 0; // iterator
