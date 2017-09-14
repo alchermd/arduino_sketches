@@ -1,6 +1,7 @@
 #include <Keypad.h> // Make sure to install the Keypad library
 #include <stdbool.h>
 #include <string.h>
+#include "helpers.h"
 
 /* Keypad setup. */
 
@@ -30,11 +31,6 @@ char pw[] = "123";
 char user_pw[4];
 
 size_t i = 0; // iterator
-
-
-/* Function signatures. */
-void clearArray(char arr[], size_t len);
-
 
 void setup(){
     user_pw[3] = '\0';
@@ -82,12 +78,5 @@ void loop(){
         }
     }
 
-}
-
-// Sets all of the array's content to a space character ' '.
-void clearArray(char arr[], size_t len) {
-    for (size_t n = 0; n < len; n++) {
-        arr[n] = ' ';
-    }
 }
 
